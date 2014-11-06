@@ -43,6 +43,9 @@ class EffectGravityViewController: UIViewController {
 
         let subview = UIView()
         subview.backgroundColor = UIColor.redColor()
+        subview.userInteractionEnabled = false
+        subview.layer.borderColor = UIColor.blackColor().CGColor
+        subview.layer.borderWidth = 1
         
 //        let subview = UISwitch()
         

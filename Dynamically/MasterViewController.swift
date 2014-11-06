@@ -14,6 +14,7 @@ enum Effects: Int {
     case SnapToLocation
     case SnapToCentre
     case Follow
+    case Cradle
 
     var title : String {
         switch self {
@@ -22,6 +23,7 @@ enum Effects: Int {
         case .SnapToLocation: return "SnapToLocation"
         case .SnapToCentre:   return "SnapToCentre"
         case .Follow:         return "Follow"
+        case .Cradle:         return "Cradle"
         }
     }
 }
@@ -33,7 +35,7 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,6 +57,7 @@ class MasterViewController: UITableViewController {
         case 2: return Effects.SnapToLocation
         case 3: return Effects.SnapToCentre
         case 4: return Effects.Follow
+        case 5: return Effects.Cradle
         default: return nil
         }
     }

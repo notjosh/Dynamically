@@ -61,6 +61,7 @@
                         <segue destination="GZ3-5b-0Be" kind="show" identifier="SnapToLocation" id="TMV-Pr-DrI"/>
                         <segue destination="SRK-Gb-aM1" kind="show" identifier="SnapToCentre" id="bWH-0x-3u2"/>
                         <segue destination="wA4-nB-19x" kind="show" identifier="Follow" id="jHl-sN-Y3R"/>
+                        <segue destination="KU5-PY-zKs" kind="show" identifier="Cradle" id="17c-yp-pWy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -278,6 +279,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eks-xU-RYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1343" y="3103"/>
+        </scene>
+        <!--Cradle-->
+        <scene sceneID="W6G-Aq-hFQ">
+            <objects>
+                <viewController id="KU5-PY-zKs" customClass="EffectCradleViewController" customModule="Dynamically" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jXc-7T-geU"/>
+                        <viewControllerLayoutGuide type="bottom" id="JsP-Pp-zL6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iql-Nc-bHg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHj-ek-Gxn">
+                                <rect key="frame" x="279" y="550" width="42" height="30"/>
+                                <state key="normal" title="Boop!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="boop:" destination="KU5-PY-zKs" eventType="touchUpInside" id="lDZ-6K-Mrg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="AHj-ek-Gxn" secondAttribute="centerX" id="FZZ-l5-1gf"/>
+                            <constraint firstItem="JsP-Pp-zL6" firstAttribute="top" secondItem="AHj-ek-Gxn" secondAttribute="bottom" constant="20" id="QMe-nZ-L3q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cradle" id="u8o-9Y-xcV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cek-9c-Kuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="3873"/>
         </scene>
     </scenes>
 </document>

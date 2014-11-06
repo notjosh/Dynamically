@@ -35,7 +35,7 @@ class EffectSnapToLocationViewController: UIViewController {
             snapToPoint: gr.locationInView(view)
         )
 
-        snap?.damping = 0.1
+        snap?.damping = 0.2
 
         animator?.addBehavior(snap)
     }

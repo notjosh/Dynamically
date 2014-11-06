@@ -18,6 +18,7 @@
 		426590691A0AC76300E896F8 /* EffectSnapToLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426590681A0AC76300E896F8 /* EffectSnapToLocationViewController.swift */; };
 		426BC6391A0ACB700015F3D5 /* EffectSnapToCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BC6381A0ACB700015F3D5 /* EffectSnapToCentreViewController.swift */; };
 		42B97F431A0ACD8A007A1AB8 /* EffectFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B97F421A0ACD8A007A1AB8 /* EffectFollowViewController.swift */; };
+		42FD470C1A0B60DB00DBE20F /* EffectCradleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD470B1A0B60DB00DBE20F /* EffectCradleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		426590681A0AC76300E896F8 /* EffectSnapToLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectSnapToLocationViewController.swift; sourceTree = "<group>"; };
 		426BC6381A0ACB700015F3D5 /* EffectSnapToCentreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectSnapToCentreViewController.swift; sourceTree = "<group>"; };
 		42B97F421A0ACD8A007A1AB8 /* EffectFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectFollowViewController.swift; sourceTree = "<group>"; };
+		42FD470B1A0B60DB00DBE20F /* EffectCradleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectCradleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				426590681A0AC76300E896F8 /* EffectSnapToLocationViewController.swift */,
 				426BC6381A0ACB700015F3D5 /* EffectSnapToCentreViewController.swift */,
 				42B97F421A0ACD8A007A1AB8 /* EffectFollowViewController.swift */,
+				42FD470B1A0B60DB00DBE20F /* EffectCradleViewController.swift */,
 				42112F2A1A0AB4010092A316 /* Main.storyboard */,
 				42112F2D1A0AB4010092A316 /* Images.xcassets */,
 				42112F2F1A0AB4010092A316 /* LaunchScreen.xib */,
@@ -231,6 +234,7 @@
 				426590651A0AB8FD00E896F8 /* EffectGravityViewController.swift in Sources */,
 				42B97F431A0ACD8A007A1AB8 /* EffectFollowViewController.swift in Sources */,
 				426590691A0AC76300E896F8 /* EffectSnapToLocationViewController.swift in Sources */,
+				42FD470C1A0B60DB00DBE20F /* EffectCradleViewController.swift in Sources */,
 				426BC6391A0ACB700015F3D5 /* EffectSnapToCentreViewController.swift in Sources */,
 				42112F271A0AB4010092A316 /* MasterViewController.swift in Sources */,
 				42112F251A0AB4010092A316 /* AppDelegate.swift in Sources */,
