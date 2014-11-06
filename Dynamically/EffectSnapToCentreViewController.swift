@@ -34,7 +34,7 @@ class EffectSnapToCentreViewController: UIViewController {
                 x: centredThing!.center.x + gr.translationInView(view).x,
                 y: centredThing!.center.y + gr.translationInView(view).y
             );
-            
+
             gr.setTranslation(CGPointZero, inView: view)
         } else if UIGestureRecognizerState.Ended == gr.state {
             animator?.addBehavior(snap)

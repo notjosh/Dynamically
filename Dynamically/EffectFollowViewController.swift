@@ -17,53 +17,58 @@ class EffectFollowViewController: UIViewController {
     
     var animator: UIDynamicAnimator?
     var drag: UIAttachmentBehavior?
+    var gravity: UIGravityBehavior?
+    
+    func balls() -> [UIView] {
+        return [ball1!, ball2!, ball3!, ball4!]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         for ball in balls() {
-            ball.hidden = true
+            ball.layer.cornerRadius = ball.bounds.width / 2
         }
         
         animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: balls())
         
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
-        
-        animator?.addBehavior(UIAttachmentBehavior(item: ball1!, attachedToItem: ball2!))
-        animator?.addBehavior(UIAttachmentBehavior(item: ball2!, attachedToItem: ball3!))
-        animator?.addBehavior(UIAttachmentBehavior(item: ball3!, attachedToItem: ball4!))
+
+        drop()
     }
 
     func pan(gr: UIPanGestureRecognizer) {
         if UIGestureRecognizerState.Began == gr.state {
-            for ball in balls() {
-                ball.hidden = false
-            }
+            animator?.removeBehavior(gravity)
+
+            attach()
+
             drag = UIAttachmentBehavior(item: ball1!, attachedToAnchor: gr.locationInView(view))
-            drag!.length = 20
+            drag!.length = 0
+
             animator?.addBehavior(drag)
         } else if UIGestureRecognizerState.Changed == gr.state {
             drag!.anchorPoint = gr.locationInView(view)
         } else if UIGestureRecognizerState.Ended == gr.state {
             animator?.removeAllBehaviors()
-            view.removeGestureRecognizer(gr)
             drop()
         }
     }
     
+    func attach() {
+        for i in 0...(balls().count - 2) {
+            let a = UIAttachmentBehavior(item: balls()[i], attachedToItem: balls()[i + 1])
+            a.length = balls()[i].bounds.width / 2 + balls()[i + 1].bounds.width / 2 - 1
+            animator?.addBehavior(a)
+        }
+    }
+    
     func drop() {
-        animator?.addBehavior(UIGravityBehavior(items: balls()))
+        animator?.addBehavior(gravity)
 
         let collisionBehaviour = UICollisionBehavior(items: balls())
         collisionBehaviour.translatesReferenceBoundsIntoBoundary = true;
         animator?.addBehavior(collisionBehaviour)
-    }
-    
-    func distanceBetween(p1: CGPoint, p2: CGPoint) -> CGFloat {
-        return sqrt(pow((p1.x - p2.x), 2.0) + pow((p1.y - p2.y), 2.0));
-    }
-    
-    func balls() -> [UIView] {
-        return [ball1!, ball2!, ball3!, ball4!]
     }
 }

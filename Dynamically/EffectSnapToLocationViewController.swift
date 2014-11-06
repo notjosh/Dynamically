@@ -28,15 +28,17 @@ class EffectSnapToLocationViewController: UIViewController {
             return
         }
 
-        animator?.removeBehavior(snap)
+        blob?.center = gr.locationInView(view)
 
-        snap = UISnapBehavior(
-            item: blob!,
-            snapToPoint: gr.locationInView(view)
-        )
-
-        snap?.damping = 0.2
-
-        animator?.addBehavior(snap)
+//        animator?.removeBehavior(snap)
+//
+//        snap = UISnapBehavior(
+//            item: blob!,
+//            snapToPoint: gr.locationInView(view)
+//        )
+//
+//        snap?.damping = 0.2
+//
+//        animator?.addBehavior(snap)
     }
 }

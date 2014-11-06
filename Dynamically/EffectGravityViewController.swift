@@ -19,19 +19,14 @@ class EffectGravityViewController: UIViewController {
         
         animator = UIDynamicAnimator(referenceView: view)
 
-        gravityBehaviour = UIGravityBehavior()
-        animator?.addBehavior(gravityBehaviour)
+//        gravityBehaviour = UIGravityBehavior()
+//        animator?.addBehavior(gravityBehaviour)
 
-        collisionBehaviour = UICollisionBehavior()
-        collisionBehaviour?.translatesReferenceBoundsIntoBoundary = true
-        animator?.addBehavior(collisionBehaviour)
+//        collisionBehaviour = UICollisionBehavior()
+//        collisionBehaviour?.translatesReferenceBoundsIntoBoundary = true
+//        animator?.addBehavior(collisionBehaviour)
 
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tap:"))
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tap(gr: UIGestureRecognizer) {
@@ -42,6 +37,7 @@ class EffectGravityViewController: UIViewController {
         let dimension: Int = Int(arc4random_uniform(40)) + 20
 
         let subview = UIView()
+//        subview.layer.cornerRadius = CGFloat(dimension) / 2
         subview.backgroundColor = UIColor.redColor()
         subview.userInteractionEnabled = false
         subview.layer.borderColor = UIColor.blackColor().CGColor
