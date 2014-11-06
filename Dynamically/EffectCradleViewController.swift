@@ -20,7 +20,6 @@ class EffectCradleViewController: UIViewController {
 
         animator = UIDynamicAnimator(referenceView: view)
 
-        createBalls()
         setupBalls()
         dynamify()
     }
@@ -31,18 +30,12 @@ class EffectCradleViewController: UIViewController {
         animator?.addBehavior(push)
     }
     
-    func createBalls() {
+    func setupBalls() {
         for i in 1...5 {
             balls.append(UIView())
         }
 
-        for ball in balls {
-            ball.backgroundColor = UIColor.redColor()
-            view.addSubview(ball)
-        }
-    }
-    
-    func setupBalls() {
+
         let size = view.bounds.width / CGFloat((3 * (balls.count - 1)))
 
         for (idx, b) in enumerate(balls) {
@@ -57,6 +50,9 @@ class EffectCradleViewController: UIViewController {
             )
 
             ball.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pan:"))
+
+            ball.backgroundColor = UIColor.redColor()
+            view.addSubview(ball)
         }
     }
     
