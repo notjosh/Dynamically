@@ -8,6 +8,8 @@
 
 import UIKit
 
+// fairly well taken from http://www.shinobicontrols.com/blog/posts/2013/09/19/ios7-day-by-day-day-0-uikit-dynamics
+
 class EffectCradleViewController: UIViewController {
 
     var balls: [UIView] = []
