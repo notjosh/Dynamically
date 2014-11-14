@@ -23,7 +23,7 @@ class EffectCradleViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
 
         setupBalls()
-//        dynamify()
+        dynamify()
     }
     
     @IBAction func boop(sender: AnyObject) {
@@ -66,9 +66,9 @@ class EffectCradleViewController: UIViewController {
             behaviour.addChildBehavior(attachmentForBall(ball))
         }
         
-//        behaviour.addChildBehavior(gravityForBalls())
-//        behaviour.addChildBehavior(collisionForBalls())
-//        behaviour.addChildBehavior(itemForBalls())
+        behaviour.addChildBehavior(gravityForBalls())
+        behaviour.addChildBehavior(collisionForBalls())
+        behaviour.addChildBehavior(itemForBalls())
         
         animator?.addBehavior(behaviour)
     }
